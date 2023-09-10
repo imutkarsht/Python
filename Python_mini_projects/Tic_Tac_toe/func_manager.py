@@ -5,9 +5,8 @@ row2=["➖","➖","➖"]
 row3=["➖","➖","➖"]
 
 board=[row1,row2,row3]
-
-comp_response="❌"
-
+PLAYER_RESPONSE="⭕"
+COMP_RESPONSE="❌"
 #function to reset the board
 def reset_board():
     for i in range(0,3):
@@ -22,30 +21,28 @@ def print_board():
     
 # Function to take Input of Row and column from User and return the value
 
-def user_input_row():
-    a=int(input("Row: "))
-    return a
-
-def user_input_col():
-    b=int(input("Column: "))
-    return b    
-
-# function to check  if board is full...
-def isfull(board):
-    if("➖" in board==False):
-        return 1
-    else:
-        return 0
-    
+def user_input():
+    while True:
+        try:
+            user_row = int(input("Row: "))
+            user_col = int(input("Column: "))
+            if 1 <= user_row <= 3 and 1 <= user_col <= 3:
+                return user_row, user_col
+            else:
+                print("Out of Range value! Please enter values in the range [1, 3].")
+        except ValueError:
+            print("Invalid input. Please enter numeric values.")
+            
 # Function to randomly generate value of Row and column based on user Input and avaliable space and return it
-def randomise_comp_col(board):
+
+def randomise_comp_col():
     if ("➖" in row1 or "➖" in row2 or "➖" in row3 == True):
         comp_col=random.randint(0,2)
         return comp_col
     else:
         return -1
 
-def randomise_comp_row(board):
+def randomise_comp_row():
     if ("➖" in row1 or "➖" in row2 or "➖" in row3 == True):
         comp_row=random.randint(0,2)
         return comp_row
@@ -57,7 +54,7 @@ def randomise_comp_row(board):
 def check_blankspace(board,a,b):
     flag=-1
     if(board[a-1][b-1]=="➖"):     
-        board[a-1][b-1]="⭕"
+        board[a-1][b-1]=PLAYER_RESPONSE
         flag=0
         return flag
     else:
@@ -77,8 +74,8 @@ def checkifwin(board):
     D1=[board[0][0],board[1][1],board[2][2]]
     D2=[board[0][2],board[1][1],board[2][0]]
 
-    val= ["⭕","⭕","⭕"]
-    val2=["❌","❌","❌"]
+    val= [PLAYER_RESPONSE,PLAYER_RESPONSE,PLAYER_RESPONSE]
+    val2=[COMP_RESPONSE,COMP_RESPONSE,COMP_RESPONSE]
     if(R1==val or R2==val or R3==val or C1==val or C2==val or C3==val or D1==val or D2==val):
         return 'p'
     
@@ -88,4 +85,3 @@ def checkifwin(board):
         return 'd'
     else:
         return -1    
-                  

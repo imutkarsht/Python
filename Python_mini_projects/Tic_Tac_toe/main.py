@@ -12,26 +12,11 @@ def driver_fun():
         game_not_ended=True
         while game_not_ended:
             # Taking Vlaue of row and column in range [0,2]
-            cor_in1=0
-            while(cor_in1==0):
-                user_row=func_manager.user_input_row()
-                if(user_row<1 or user_row>3):
-                    print("Out of Range value! please enter value in range")
-                else:
-                    cor_in1=1
-                  
-                    
-            cor_in2=0     
-            while(cor_in2==0):
-                user_col=func_manager.user_input_col()
-                if(user_col<1 or user_col>3):
-                    print("Out of Range value! please enter value in range")
-                else:
-                    cor_in2=1  
+            user_row,user_col=func_manager.user_input()
                     
             os.system('cls')
-            comp_col=func_manager.randomise_comp_col(func_manager.board)
-            comp_row=func_manager.randomise_comp_row(func_manager.board)       
+            comp_col=func_manager.randomise_comp_col()
+            comp_row=func_manager.randomise_comp_row()       
             
             # Filling Board only on spaces balnk....
             
@@ -43,10 +28,10 @@ def driver_fun():
                     if(comp_row==-1 and comp_col==-1):
                         break      
                     elif(func_manager.board[comp_row][comp_col]!="➖"):
-                        comp_col=func_manager.randomise_comp_col(func_manager.board)
-                        comp_row=func_manager.randomise_comp_row(func_manager.board)
+                        comp_col=func_manager.randomise_comp_col()
+                        comp_row=func_manager.randomise_comp_row()
                     else:
-                        func_manager.board[comp_row][comp_col]="❌"
+                        func_manager.board[comp_row][comp_col]=func_manager.COMP_RESPONSE
                         comp_flag=1 
                             
             # Checking Whether a result occured in the game
@@ -70,9 +55,9 @@ def driver_fun():
                 
         ch=input("Want to play again(y/n)?") 
         if(ch!='y'):
-            print(f"Final Scores are....PLAYER: {player_score}\tCOMPUTER: {comp_score}")
+            print(f"\nFinal Scores are....PLAYER: {player_score}\tCOMPUTER: {comp_score}")
             break   
 
 if __name__=="__main__":
-    print("Hello Welcome to the game of TIC TAC TOE... You will go first\nYou are ⭕ and Computer is ❌\nhere you go...\nEnter The value of Row and column Where you want to Enter your response\nValue of Row and column entered must be in range [1,3]")            
+    print(f"Hello Welcome to the game of TIC TAC TOE... You will go first\n\nYou are {func_manager.PLAYER_RESPONSE} and Computer is {func_manager.COMP_RESPONSE}\n\nhere you go...\n\nEnter The value of Row and column Where you want to Enter your response\n\nValue of Row and column entered must be in range [1,3]\n")            
     driver_fun()                      
