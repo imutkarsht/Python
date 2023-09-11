@@ -20,11 +20,11 @@ while True:
 
 def generate_pass(alphabets,numbers,symbols,size,alpha_no,symbol_no,number_no):
     password=""
-    for i in range (0,alpha_no+1):
+    for _ in range (0,alpha_no+1):
         password+=random.choice(alphabets)
-    for i in range (alpha_no,alpha_no+symbol_no):
+    for _ in range (alpha_no,alpha_no+symbol_no):
         password+=random.choice(symbols)    
-    for i in range (alpha_no+symbol_no,alpha_no+symbol_no+number_no):
+    for _ in range (alpha_no+symbol_no,alpha_no+symbol_no+number_no):
         password+=random.choice(numbers) 
     
     char_list = list(password)
