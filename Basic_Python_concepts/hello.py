@@ -31,4 +31,3 @@ print("hey!", 6, 7, sep="_", end="007")
 print("New Line")
 
 #end parameter is used to decide what character will be appending two diiferent print statement, default is new line
-
