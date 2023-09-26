@@ -1,9 +1,10 @@
-# GUESS THE NUMBER GAME BETWEEN AN INTERVAL
+#PYTHON PROGRAM TO GUESS THE NUMBER GAME BETWEEN AN INTERVAL
 
 from random import randint
 from os import system
 
 # FUNCTION TO SET LOWER BOUND OF NUMBERS
+
 
 def set_range_low():
     while True:
@@ -94,12 +95,18 @@ def main():
             print(f"You were unable to guess\nYou lose\nBTW I was thinking about {Comp_num}")
             break
 
+# Execution Starts From Here
+
 if __name__ == "__main__":
     while True:
         print("\t\t\tWELCOME TO THE GUESS THE NUMBER GAME\n\n")
-        ch = input("Would You Like to Play the game(y/n)\t")
+        ch = input("Would You Like to Play the game(y/n)\t").lower()
         system("cls")
-        if ch != "y":
-            break
+        if ch == "n":
+          system('cls')
+          print("Bye Have a nice day...")
+          break
+        elif ch=='y':
+          main()
         else:
-            main()
+          print("Please Enter A valid response...")

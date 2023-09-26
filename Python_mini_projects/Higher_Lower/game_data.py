@@ -1,0 +1,122 @@
+data = [
+    {
+        "name": "Christiano Ronaldo",
+        "followers": "605.0",
+        "country": "Portugal",
+        "type": "Athlete",
+    },
+    {
+        "name": "Lionel Messi",
+        "followers": "750.0",
+        "country": "Argentina",
+        "type": "Athlete",
+    },
+    {
+        "name": "Serena Williams",
+        "followers": "350.0",
+        "country": "USA",
+        "type": "Athlete",
+    },
+    {
+        "name": "Elon Musk",
+        "followers": "30.0",
+        "country": "USA",
+        "type": "Entrepreneur",
+    },
+    {
+        "name": "Angela Merkel",
+        "followers": "0.15",
+        "country": "Germany",
+        "type": "Politician",
+    },
+    {
+        "name": "Usain Bolt",
+        "followers": "0.4",
+        "country": "Jamaica",
+        "type": "Athlete",
+    },
+    {
+        "name": "Beyoncé",
+        "followers": "120.0",
+        "country": "USA",
+        "type": "Musician",
+    },
+    {
+        "name": "Mark Zuckerberg",
+        "followers": "90.0",
+        "country": "USA",
+        "type": "Entrepreneur",
+    },
+    {
+        "name": "Justin Trudeau",
+        "followers": "4.0",
+        "country": "Canada",
+        "type": "Politician",
+    },
+    {
+        "name": "Simone Biles",
+        "followers": "0.6",
+        "country": "USA",
+        "type": "Athlete",
+    },
+    {
+        "name": "Adele",
+        "followers": "55.0",
+        "country": "UK",
+        "type": "Musician",
+    },
+    {
+        "name": "Warren Buffett",
+        "followers": "2.0",
+        "country": "USA",
+        "type": "Entrepreneur",
+    },
+    {
+        "name": "Jacinda Ardern",
+        "followers": "1.0",
+        "country": "New Zealand",
+        "type": "Politician",
+    },
+    {
+        "name": "Novak Djokovic",
+        "followers": "8.0",
+        "country": "Serbia",
+        "type": "Athlete",
+    },
+    {
+        "name": "Katy Perry",
+        "followers": "115.0",
+        "country": "USA",
+        "type": "Musician",
+    },
+    {
+        "name": "Bill Gates",
+        "followers": "60.0",
+        "country": "USA",
+        "type": "Entrepreneur",
+    },
+    {
+        "name": "Emmanuel Macron",
+        "followers": "4.0",
+        "country": "France",
+        "type": "Politician",
+    },
+    {
+        "name": "LeBron James",
+        "followers": "80.0",
+        "country": "USA",
+        "type": "Athlete",
+    },
+    {
+        "name": "Taylor Swift",
+        "followers": "140.0",
+        "country": "USA",
+        "type": "Musician",
+    },
+    {
+        "name": "Oprah Winfrey",
+        "followers": "45.0",
+        "country": "USA",
+        "type": "Media Mogul",
+    }
+]
