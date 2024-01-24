@@ -1,28 +1,12 @@
-# Python program to check if entered number is a palindrome
-import math
 n=int(input("Enter a number: "))
-num=n
-
-#Finding number of digits
-
-c=0
-while(n!=0):
-    n=n//10
-    c=c+1
-       
-digits=c    
-
-# Logic to reverse the given number
-s=0
-orignal_number=num
-while(digits!=0):
-    tmp=int(num%10)
-    s=int(s+tmp*math.pow(10,digits-1))
-    num=int(num/10)
-    digits=digits-1
+num = n;
+rev = 0
+while n!=0 :
+    dig = n % 10
+    rev = rev *10 + dig
+    n = int(n / 10)
     
-if(s==orignal_number):
-    print("The Entered Number is a Palindrome:")
-else:
-    print("The Entered Number is not a palindrome:")        
-    
+if rev == num :
+    print(f"{num} is a Palindrome number")
+else :
+    print(f"{num} is not a palindrome number")
